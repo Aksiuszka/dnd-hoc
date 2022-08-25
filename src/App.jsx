@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Form from './components/Form';
+import Modal from './components/Modal';
+import Spinner from './components/Spinner';
 import { TaskGroup } from './components/styled';
 import TaskList from './components/TaskList';
 import withDrop from './components/withDrop';
@@ -21,6 +23,7 @@ function App() {
         <h2>Done</h2>
         <ListWithDrop dispatch={dispatch} items={completedTodos} todos={completedTodos} />
       </TaskGroup>
+      <Modal><Spinner/></Modal>
     </div>
   );
 }
